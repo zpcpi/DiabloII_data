@@ -1,0 +1,1 @@
+return {'o_card_redplayer1','o_card_redplayer2','o_card_blueplayer1','o_card_blueplayer2','o_typedef','p_battle','p_skill','p_tLua','o_order','o_skill'}

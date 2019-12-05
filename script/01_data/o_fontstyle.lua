@@ -1,0 +1,74 @@
+--[[1f05
+
+]]
+local t = {
+'o_fontstyle',
+{
+	{
+		['name']=0x1f050001,
+		['showname']='白色',
+		['id']=1,
+		['color']=0xffffff,
+	},
+	{
+		['name']=0x1f050002,
+		['showname']='黑色',
+		['id']=2,
+		['color']=0x0,
+	},
+	{
+		['name']=0x1f050003,
+		['showname']='红色',
+		['id']=3,
+		['color']=0x7226f9,
+	},
+	{
+		['name']=0x1f050004,
+		['showname']='蓝色',
+		['id']=4,
+		['color']=0xefd966,
+	},
+	{
+		['name']=0x1f050005,
+		['showname']='黄色',
+		['id']=5,
+		['color']=0x74dbe6,
+	},
+	{
+		['name']=0x1f050006,
+		['showname']='绿色',
+		['id']=6,
+		['color']=0x2ae2a6,
+	},
+	{
+		['name']=0x1f050007,
+		['showname']='紫色',
+		['id']=7,
+		['color']=0xff81ae,
+	},
+	{
+		['name']=0x1f050008,
+		['showname']='橙色',
+		['id']=8,
+		['color']=0x1f97fd,
+	},
+	{
+		['name']=0x1f050009,
+		['showname']='灰色',
+		['id']=9,
+		['color']=0x7f7f7f,
+	},
+	{
+		['name']=0x1f05000a,
+		['showname']='深蓝',
+		['id']=10,
+		['color']=0x783314,
+	},
+	{
+		['name']=0x1f05000b,
+		['showname']='深红',
+		['id']=11,
+		['color']=0x500aae,
+	},
+}}
+return t

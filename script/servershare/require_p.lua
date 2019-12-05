@@ -1,0 +1,5 @@
+require "p_array_func"
+require "p_cheat_system"
+require "p_cls_data_excelfixfunc"
+require "p_cls_data_excelreader"
+require "p_init"
