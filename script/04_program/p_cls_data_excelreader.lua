@@ -308,7 +308,8 @@ local function xmlstr2str(str)
         str = string.gsub(str, '&gt;', '>')
         str = string.gsub(str, '&quot;', '"')
         str = string.gsub(str, '&apos;', "'")
-        str = string.gsub(str, "'", "\\\'")
+        --str = string.gsub(str, "'", "\\\'")
+        str = string.gsub(str, '"', '')
         return str
     end
 end
@@ -431,7 +432,13 @@ local excel_写出函数_可支持类型 = {
     ['int'] = int2string,
     ['int16'] = int162string,
     ['number'] = number2string,
-    ['string'] = function (v) return tostring(v) end,
+    ['string'] = function (v) 
+        if string.find(v, ',') then
+            return '"' .. tostring(v) .. '"'
+        else
+            return tostring(v) 
+        end
+    end,
     ['id'] = int162string,
     ['bool'] = bool2string,
     ['code_formula'] = function (v) return '"' .. v2formula(v) .. '"' end,
@@ -1129,7 +1136,6 @@ end
 local function excel_写出数据_生成字符串(_o_any_values)
     -- 写出表头数据
     for k,v in npairs(属性数组_origin) do
-        print(k, 列号数组[k], v)
         excel_写出数据_生成字符串_table(let2int(列号数组[k]), 1, v)
     end
 
