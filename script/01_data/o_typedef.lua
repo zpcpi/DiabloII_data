@@ -167,816 +167,821 @@ local t = {
 		['showname']='Armor',
 		['define']={
 			[1]={
+				['name']='str_name',
+				['type']='string',
+				['needcopy']=true,
+			},
+			[2]={
 				['name']='version',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[2]={
+			[3]={
 				['name']='compactsave',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[3]={
+			[4]={
 				['name']='rarity',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[4]={
+			[5]={
 				['name']='spawnable',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[5]={
+			[6]={
 				['name']='minac',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[6]={
+			[7]={
 				['name']='maxac',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[7]={
+			[8]={
 				['name']='absorbs',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[8]={
+			[9]={
 				['name']='speed',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[9]={
+			[10]={
 				['name']='reqstr',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[10]={
+			[11]={
 				['name']='block',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[11]={
+			[12]={
 				['name']='durability',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[12]={
+			[13]={
 				['name']='nodurability',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[13]={
+			[14]={
 				['name']='level',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[14]={
+			[15]={
 				['name']='levelreq',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[15]={
+			[16]={
 				['name']='cost',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[16]={
+			[17]={
 				['name']='gamble cost',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[17]={
+			[18]={
 				['name']='code',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[18]={
+			[19]={
 				['name']='namestr',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[19]={
+			[20]={
 				['name']='magic lvl',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[20]={
+			[21]={
 				['name']='auto prefix',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[21]={
+			[22]={
 				['name']='alternategfx',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[22]={
+			[23]={
 				['name']='OpenBetaGfx',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[23]={
+			[24]={
 				['name']='normcode',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[24]={
+			[25]={
 				['name']='ubercode',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[25]={
+			[26]={
 				['name']='ultracode',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[26]={
+			[27]={
 				['name']='spelloffset',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[27]={
+			[28]={
 				['name']='component',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[28]={
+			[29]={
 				['name']='invwidth',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[29]={
+			[30]={
 				['name']='invheight',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[30]={
+			[31]={
 				['name']='hasinv',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[31]={
+			[32]={
 				['name']='gemsockets',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[32]={
+			[33]={
 				['name']='gemapplytype',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[33]={
+			[34]={
 				['name']='flippyfile',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[34]={
+			[35]={
 				['name']='invfile',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[35]={
+			[36]={
 				['name']='uniqueinvfile',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[36]={
+			[37]={
 				['name']='setinvfile',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[37]={
+			[38]={
 				['name']='rArm',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[38]={
+			[39]={
 				['name']='lArm',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[39]={
+			[40]={
 				['name']='Torso',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[40]={
+			[41]={
 				['name']='Legs',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[41]={
+			[42]={
 				['name']='rSPad',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[42]={
+			[43]={
 				['name']='lSPad',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[43]={
+			[44]={
 				['name']='useable',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[44]={
+			[45]={
 				['name']='throwable',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[45]={
+			[46]={
 				['name']='stackable',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[46]={
+			[47]={
 				['name']='minstack',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[47]={
+			[48]={
 				['name']='maxstack',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[48]={
+			[49]={
 				['name']='type',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[49]={
+			[50]={
 				['name']='type2',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[50]={
+			[51]={
 				['name']='dropsound',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[51]={
+			[52]={
 				['name']='dropsfxframe',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[52]={
+			[53]={
 				['name']='usesound',
 				['type']='string',
 				['needcopy']=true,
 			},
-			[53]={
+			[54]={
 				['name']='unique',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[54]={
+			[55]={
 				['name']='transparent',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[55]={
+			[56]={
 				['name']='transtbl',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[56]={
+			[57]={
 				['name']='quivered',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[57]={
+			[58]={
 				['name']='lightradius',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[58]={
+			[59]={
 				['name']='belt',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[59]={
+			[60]={
 				['name']='quest',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[60]={
+			[61]={
 				['name']='missiletype',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[61]={
+			[62]={
 				['name']='durwarning',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[62]={
+			[63]={
 				['name']='qntwarning',
 				['type']='int',
 				['needcopy']=true,
 			},
-			[63]={
-				['name']='mindam',
-				['type']='int',
-				['needcopy']=true,
-			},
 			[64]={
-				['name']='maxdam',
+				['name']='mindam',
 				['type']='int',
 				['needcopy']=true,
 			},
 			[65]={
-				['name']='StrBonus',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[66]={
-				['name']='DexBonus',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[67]={
-				['name']='gemoffset',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[68]={
-				['name']='bitfield1',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[69]={
-				['name']='CharsiMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[70]={
-				['name']='CharsiMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[71]={
-				['name']='CharsiMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[72]={
-				['name']='CharsiMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[73]={
-				['name']='CharsiMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[74]={
-				['name']='GheedMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[75]={
-				['name']='GheedMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[76]={
-				['name']='GheedMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[77]={
-				['name']='GheedMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[78]={
-				['name']='GheedMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[79]={
-				['name']='AkaraMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[80]={
-				['name']='AkaraMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[81]={
-				['name']='AkaraMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[82]={
-				['name']='AkaraMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[83]={
-				['name']='AkaraMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[84]={
-				['name']='FaraMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[85]={
-				['name']='FaraMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[86]={
-				['name']='FaraMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[87]={
-				['name']='FaraMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[88]={
-				['name']='FaraMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[89]={
-				['name']='LysanderMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[90]={
-				['name']='LysanderMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[91]={
-				['name']='LysanderMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[92]={
-				['name']='LysanderMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[93]={
-				['name']='LysanderMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[94]={
-				['name']='DrognanMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[95]={
-				['name']='DrognanMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[96]={
-				['name']='DrognanMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[97]={
-				['name']='DrognanMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[98]={
-				['name']='DrognanMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[99]={
-				['name']='HraltiMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[100]={
-				['name']='HraltiMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[101]={
-				['name']='HraltiMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[102]={
-				['name']='HraltiMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[103]={
-				['name']='HraltiMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[104]={
-				['name']='AlkorMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[105]={
-				['name']='AlkorMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[106]={
-				['name']='AlkorMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[107]={
-				['name']='AlkorMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[108]={
-				['name']='AlkorMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[109]={
-				['name']='OrmusMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[110]={
-				['name']='OrmusMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[111]={
-				['name']='OrmusMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[112]={
-				['name']='OrmusMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[113]={
-				['name']='OrmusMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[114]={
-				['name']='ElzixMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[115]={
-				['name']='ElzixMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[116]={
-				['name']='ElzixMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[117]={
-				['name']='ElzixMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[118]={
-				['name']='ElzixMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[119]={
-				['name']='AshearaMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[120]={
-				['name']='AshearaMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[121]={
-				['name']='AshearaMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[122]={
-				['name']='AshearaMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[123]={
-				['name']='AshearaMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[124]={
-				['name']='CainMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[125]={
-				['name']='CainMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[126]={
-				['name']='CainMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[127]={
-				['name']='CainMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[128]={
-				['name']='CainMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[129]={
-				['name']='HalbuMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[130]={
-				['name']='HalbuMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[131]={
-				['name']='HalbuMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[132]={
-				['name']='HalbuMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[133]={
-				['name']='HalbuMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[134]={
-				['name']='JamellaMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[135]={
-				['name']='JamellaMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[136]={
-				['name']='JamellaMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[137]={
-				['name']='JamellaMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[138]={
-				['name']='JamellaMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[139]={
-				['name']='LarzukMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[140]={
-				['name']='LarzukMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[141]={
-				['name']='LarzukMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[142]={
-				['name']='LarzukMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[143]={
-				['name']='LarzukMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[144]={
-				['name']='MalahMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[145]={
-				['name']='MalahMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[146]={
-				['name']='MalahMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[147]={
-				['name']='MalahMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[148]={
-				['name']='MalahMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[149]={
-				['name']='DrehyaMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[150]={
-				['name']='DrehyaMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[151]={
-				['name']='DrehyaMagicMin',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[152]={
-				['name']='DrehyaMagicMax',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[153]={
-				['name']='DrehyaMagicLvl',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[154]={
-				['name']='Source Art',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[155]={
-				['name']='Game Art',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[156]={
-				['name']='Transform',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[157]={
-				['name']='InvTrans',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[158]={
-				['name']='SkipName',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[159]={
-				['name']='NightmareUpgrade',
-				['type']='string',
-				['needcopy']=true,
-			},
-			[160]={
-				['name']='HellUpgrade',
-				['type']='string',
-				['needcopy']=true,
-			},
-			[161]={
-				['name']='mindam',
-				['type']='int',
-				['needcopy']=true,
-			},
-			[162]={
 				['name']='maxdam',
 				['type']='int',
 				['needcopy']=true,
 			},
+			[66]={
+				['name']='StrBonus',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[67]={
+				['name']='DexBonus',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[68]={
+				['name']='gemoffset',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[69]={
+				['name']='bitfield1',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[70]={
+				['name']='CharsiMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[71]={
+				['name']='CharsiMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[72]={
+				['name']='CharsiMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[73]={
+				['name']='CharsiMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[74]={
+				['name']='CharsiMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[75]={
+				['name']='GheedMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[76]={
+				['name']='GheedMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[77]={
+				['name']='GheedMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[78]={
+				['name']='GheedMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[79]={
+				['name']='GheedMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[80]={
+				['name']='AkaraMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[81]={
+				['name']='AkaraMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[82]={
+				['name']='AkaraMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[83]={
+				['name']='AkaraMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[84]={
+				['name']='AkaraMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[85]={
+				['name']='FaraMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[86]={
+				['name']='FaraMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[87]={
+				['name']='FaraMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[88]={
+				['name']='FaraMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[89]={
+				['name']='FaraMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[90]={
+				['name']='LysanderMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[91]={
+				['name']='LysanderMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[92]={
+				['name']='LysanderMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[93]={
+				['name']='LysanderMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[94]={
+				['name']='LysanderMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[95]={
+				['name']='DrognanMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[96]={
+				['name']='DrognanMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[97]={
+				['name']='DrognanMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[98]={
+				['name']='DrognanMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[99]={
+				['name']='DrognanMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[100]={
+				['name']='HraltiMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[101]={
+				['name']='HraltiMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[102]={
+				['name']='HraltiMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[103]={
+				['name']='HraltiMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[104]={
+				['name']='HraltiMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[105]={
+				['name']='AlkorMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[106]={
+				['name']='AlkorMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[107]={
+				['name']='AlkorMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[108]={
+				['name']='AlkorMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[109]={
+				['name']='AlkorMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[110]={
+				['name']='OrmusMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[111]={
+				['name']='OrmusMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[112]={
+				['name']='OrmusMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[113]={
+				['name']='OrmusMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[114]={
+				['name']='OrmusMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[115]={
+				['name']='ElzixMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[116]={
+				['name']='ElzixMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[117]={
+				['name']='ElzixMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[118]={
+				['name']='ElzixMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[119]={
+				['name']='ElzixMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[120]={
+				['name']='AshearaMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[121]={
+				['name']='AshearaMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[122]={
+				['name']='AshearaMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[123]={
+				['name']='AshearaMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[124]={
+				['name']='AshearaMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[125]={
+				['name']='CainMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[126]={
+				['name']='CainMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[127]={
+				['name']='CainMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[128]={
+				['name']='CainMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[129]={
+				['name']='CainMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[130]={
+				['name']='HalbuMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[131]={
+				['name']='HalbuMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[132]={
+				['name']='HalbuMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[133]={
+				['name']='HalbuMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[134]={
+				['name']='HalbuMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[135]={
+				['name']='JamellaMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[136]={
+				['name']='JamellaMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[137]={
+				['name']='JamellaMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[138]={
+				['name']='JamellaMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[139]={
+				['name']='JamellaMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[140]={
+				['name']='LarzukMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[141]={
+				['name']='LarzukMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[142]={
+				['name']='LarzukMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[143]={
+				['name']='LarzukMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[144]={
+				['name']='LarzukMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[145]={
+				['name']='MalahMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[146]={
+				['name']='MalahMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[147]={
+				['name']='MalahMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[148]={
+				['name']='MalahMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[149]={
+				['name']='MalahMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[150]={
+				['name']='DrehyaMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[151]={
+				['name']='DrehyaMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[152]={
+				['name']='DrehyaMagicMin',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[153]={
+				['name']='DrehyaMagicMax',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[154]={
+				['name']='DrehyaMagicLvl',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[155]={
+				['name']='Source Art',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[156]={
+				['name']='Game Art',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[157]={
+				['name']='Transform',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[158]={
+				['name']='InvTrans',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[159]={
+				['name']='SkipName',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[160]={
+				['name']='NightmareUpgrade',
+				['type']='string',
+				['needcopy']=true,
+			},
+			[161]={
+				['name']='HellUpgrade',
+				['type']='string',
+				['needcopy']=true,
+			},
+			[162]={
+				['name']='mindam',
+				['type']='int',
+				['needcopy']=true,
+			},
 			[163]={
+				['name']='maxdam',
+				['type']='int',
+				['needcopy']=true,
+			},
+			[164]={
 				['name']='nameable',
 				['type']='int',
 				['needcopy']=true,

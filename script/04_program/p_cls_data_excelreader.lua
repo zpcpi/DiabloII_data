@@ -281,6 +281,7 @@ local function xmlstr2str(str)
         str = string.gsub(str, '&gt;', '>')
         str = string.gsub(str, '&quot;', '"')
         str = string.gsub(str, '&apos;', "'")
+        str = string.gsub(str, "'", "\\\'")
         return str
     end
 end
