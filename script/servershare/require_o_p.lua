@@ -1,4 +1,5 @@
 require "o_animation"
+require "o_Armor"
 require "o_cheat_system_item"
 require "o_event"
 require "o_excel"
