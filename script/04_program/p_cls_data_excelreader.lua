@@ -243,6 +243,14 @@ local function string2bool(str)
     end
 end
 
+local function string2ibool(str)
+    if tonumber(str) == 1 then
+        return true
+    else
+        return nil
+    end
+end
+
 local function number2string(num)
     if num then
         return tostring(tonumber(num))
@@ -269,6 +277,14 @@ local function bool2string(bool)
         return 'TRUE'
     elseif bool == false then
         return 'FALSE'
+    else
+        return ''
+    end
+end
+
+local function ibool2string(bool)
+    if bool == true then
+        return '1'
     else
         return ''
     end
@@ -384,6 +400,7 @@ local excel_写入函数_可支持类型 = {
     ['bool'] = string2bool,
     ['code'] = function (v) return load('return (function () ' .. xmlstr2codestr(v) .. 'end)()')() end,
     ['code_formula'] = function (v) return load('return ' .. xmlstr2codestr(v))() end,
+    ['boolean'] = string2ibool,
 
     ['_int'] = readfunc_arrayify(string2int, {"|", }),
     ['_int16'] = readfunc_arrayify(string2int, {"|", }),
@@ -410,6 +427,7 @@ local excel_写出函数_可支持类型 = {
     ['id'] = int162string,
     ['bool'] = bool2string,
     ['code_formula'] = function (v) return '"' .. v2formula(v) .. '"' end,
+    ['boolean'] = ibool2string,
 
     ['_int'] = writefunc_arrayify(int2string, {"|", }),
     ['_int16'] = writefunc_arrayify(int162string, {"|", }),
