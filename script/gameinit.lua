@@ -13,6 +13,8 @@ SAVE_EVENT_LIST = {}
 local c = require "gcore.c"
 local lfs = require "lfs.c"
 local G = require "gf"
+G.cacheData = {}
+G.cacheGlobalData = {}
 local co = require "co"
 local cfg = {}
 cfg.W = 1280
@@ -56,8 +58,15 @@ G.loadFont(ft)
 local fs = require "o_fontstyle"
 G.loadFontStyle(fs)
 
+require 'servershare/gfhs_data'
+require 'servershare/gfhs_net'
+require 'servershare/gfhs_view'
 require 'servershare/require_o_p'
 require 'require_a_n'
+require 'servershare/const'
 c.SetTextRecording(true)
 G.SetDefaultAnim('prepare')
 c.SetMainloop(G.main)
+
+c.SetWinName(c.UtfToGbk('暗黑数据')) 
+require("LuaPanda")
