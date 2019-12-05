@@ -274,6 +274,17 @@ local function bool2string(bool)
     end
 end
 
+local function xmlstr2codestr(str)
+    if str ~= nil then
+        str = string.gsub(str, '&lt;', '<')
+        str = string.gsub(str, '&amp;', '&')
+        str = string.gsub(str, '&gt;', '>')
+        str = string.gsub(str, '&quot;', '"')
+        str = string.gsub(str, '&apos;', "'")
+        return str
+    end
+end
+
 local function xmlstr2str(str)
     if str ~= nil then
         str = string.gsub(str, '&lt;', '<')
@@ -371,8 +382,8 @@ local excel_写入函数_可支持类型 = {
     ['string'] = xmlstr2str,
     ['id'] = string2int,
     ['bool'] = string2bool,
-    ['code'] = function (v) return load('return (function () ' .. xmlstr2str(v) .. 'end)()')() end,
-    ['code_formula'] = function (v) return load('return ' .. xmlstr2str(v))() end,
+    ['code'] = function (v) return load('return (function () ' .. xmlstr2codestr(v) .. 'end)()')() end,
+    ['code_formula'] = function (v) return load('return ' .. xmlstr2codestr(v))() end,
 
     ['_int'] = readfunc_arrayify(string2int, {"|", }),
     ['_int16'] = readfunc_arrayify(string2int, {"|", }),

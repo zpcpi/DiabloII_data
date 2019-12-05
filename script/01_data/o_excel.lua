@@ -39,5 +39,16 @@ local t = {
 		['是否转置']=false,
 		['是否全托']=false,
 	},
+	{
+		['name']=0x10030065,
+		['showname']='Skills',
+		['class']={n=0,[1] = 'excel_读取数据',
+		},
+		['文件名称']='data_excel/Skills.xlsx',
+		['sheet名称']='Sheet1',
+		['o表名称']='o_Skills',
+		['是否转置']=false,
+		['是否全托']=false,
+	},
 }}
 return t
