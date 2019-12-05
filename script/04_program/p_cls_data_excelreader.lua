@@ -363,6 +363,14 @@ local function csv_save(path,str,mode)
     file:close()
 end
 
+local function txt_save(path,str,mode)
+    path = 'excel/data/' .. string.sub(path,3,#path) .. '.txt'
+    local txt = G.GetSavePath(path)
+    local file = io.open(path, mode)
+    file:write(str)
+    file:close()
+end
+
 local function deepcopy(orig, copy)
     local d = require "_data"
     d.deepcopy(orig, copy, {})
@@ -423,7 +431,7 @@ local excel_写出函数_可支持类型 = {
     ['int'] = int2string,
     ['int16'] = int162string,
     ['number'] = number2string,
-    ['string'] = function (v) return '"' .. tostring(v) .. '"' end,
+    ['string'] = function (v) return tostring(v) end,
     ['id'] = int162string,
     ['bool'] = bool2string,
     ['code_formula'] = function (v) return '"' .. v2formula(v) .. '"' end,
@@ -444,6 +452,7 @@ local excel_写出函数_可支持类型 = {
 
 local 数据查询表 = {}
 local 属性数组 = {}
+local 属性数组_origin = {}
 local 竖属性数组 = {}
 local 列号数组 = {}
 local 列数数组 = {}
@@ -615,6 +624,7 @@ end
 local function excel_init(string_o表名称)
     数据查询表 = {}
     属性数组 = {}
+    属性数组_origin = {}
     竖属性数组 = {}
     列号数组 = {}
     列数数组 = {}
@@ -720,6 +730,87 @@ local function excel_读取数据_sheet表头解析(boolean_调整顺序)
     end
 end
 
+--hide=true
+local function excel_读取数据_sheet表头解析_txt版本(string_o表名称)
+    local int_col = 1
+
+    local otype = G.DBTable('o_typedef')
+    local curo_define
+    local can_write = {}
+    for k,v in ipairs(otype) do
+        if v['name'] == string_o表名称 then
+            curo_define = v['define']
+        end
+    end
+    for k,v in ipairs(curo_define or {}) do
+        if v['needcopy'] then
+            can_write[v['name']] = k
+        end
+    end
+    G.show_table(can_write)
+
+
+    local function iter()
+        local str_col = int2let(int_col)
+        local str_name = 数据查询表[str_col .. '1']
+        local str_attr = 数据查询表[str_col .. '2']
+        local str_type = 数据查询表[str_col .. '3']
+        if (str_name or str_attr or str_type) == nil then
+            -- 返回是否空列
+            return false
+        end
+    
+        if str_type then
+            -- 非空，判断类型是否需要记录
+            if type_rightful(str_type) and can_write[str_attr] then
+                -- 确定当列数据属性值
+                local attr, has_y = attr_analyze(str_name, str_attr)
+                if attr and #attr > 0 then
+                    local count = nil
+                    count = can_write[str_attr]
+                        
+                    -- 属性合法
+                    属性数组[count] = attr
+                    属性数组_origin[count] = str_name
+                    竖属性数组[count] = has_y
+                    列号数组[count] = int2let(count)
+                    类型数组[count] = str_type
+                    类型字符串[count] = str_attr or str_name
+
+                    -- 写出需要的数据
+                    列数数组[count] = count
+
+
+                    -- -- 属性合法
+                    -- table.insert(属性数组, count, attr)
+                    -- table.insert(属性数组_origin, count, str_name)
+                    -- table.insert(竖属性数组, count, has_y)
+                    -- table.insert(列号数组, count, str_col)
+                    -- table.insert(类型数组, count, str_type)
+                    -- table.insert(类型字符串, count, str_attr or str_name)
+    
+                    -- -- 写出需要的数据
+                    -- table.insert(列数数组, count, int_col)
+                end
+            else
+            end
+        end
+    
+        return true
+    end
+
+    local int_当前容差 = 0
+    while int_当前容差 < int_max容差 do
+        local result = iter()
+        if result then
+            int_当前容差 = 0
+        else
+            int_当前容差 = int_当前容差 + 1
+        end
+        int_col = int_col + 1
+    end
+end
+
 local function excel_读取数据_生成数据表_单格attr(t, attr, index, v, boolean_带横杠, array_count)
     local key = attr[index]
     if key == '{X}' then
@@ -767,7 +858,7 @@ local function excel_读取数据_生成数据表_单格(t, attr, str_type, old_
     local f = excel_写入函数_可支持类型[str_type]
     if f then
         local new_v = nil
-        if old_v and old_v ~= '-' then
+        if old_v and old_v ~= '' then
             new_v = f(old_v)
         end
 
@@ -830,7 +921,7 @@ local function excel_读取数据_生成数据表()
     local int_row = 4
     while int_当前容差 <= int_max容差 do
         local id = 数据查询表['A' .. int_row]
-        if id ~= nil and id ~= '-' then
+        if id ~= nil and id ~= '' then
             int_当前容差 = 1
 
             local nt = {}
@@ -957,7 +1048,7 @@ local function excel_写出数据_生成字符串_table填充()
         for key,v in npairs(t) do
             if v then
             else
-                t[key] = '-'
+                t[key] = ''
             end
         end
     end
@@ -1036,12 +1127,19 @@ end
 
 --hide=true
 local function excel_写出数据_生成字符串(_o_any_values)
+    -- 写出表头数据
+    for k,v in npairs(属性数组_origin) do
+        print(k, 列号数组[k], v)
+        excel_写出数据_生成字符串_table(let2int(列号数组[k]), 1, v)
+    end
+
+    -- 写出o表数据
     for k,v in npairs(_o_any_values) do
         excel_写出数据_生成字符串_单行(v, #__string_result + 1)
     end
 
     excel_写出数据_生成字符串_table填充()
-    return writefunc_arrayify(function (v) return v end, {",", "\n"})(__string_result)
+    return writefunc_arrayify(function (v) return v end, {"\t", "\n"})(__string_result)
 end
 
 --hide=true
@@ -1086,7 +1184,7 @@ t['excel_写出数据'] = function(o_excel_当前数据)
     else
         local o_sheetData_表格数据 = excel_读取数据_sheet数据读取(string_文件名称, string_sheet名称)
         excel_读取建立映射(o_sheetData_表格数据, o_excel_当前数据.是否转置)
-        excel_读取数据_sheet表头解析(false)
+        excel_读取数据_sheet表头解析_txt版本(string_o表名称)
 
         if o_excel_当前数据.导出前额外处理 then
             o_any_all = G.call(o_excel_当前数据.导出前额外处理, o_any_all)
@@ -1102,8 +1200,8 @@ t['excel_写出数据'] = function(o_excel_当前数据)
         end
         G.show_table(counts)
 
-        local _string_待写入数据 = excel_写出数据_生成字符串(o_any_all)
+        local _string_待写入数据 = excel_写出数据_生成字符串(o_any_all) .. '\n'
         
-        csv_save(string_o表名称, _string_待写入数据, 'w+')
+        txt_save(string_o表名称, _string_待写入数据, 'w+')
     end
 end
