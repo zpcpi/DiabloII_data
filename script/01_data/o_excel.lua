@@ -31,24 +31,24 @@ local t = {
 	{
 		['name']=0x10030064,
 		['showname']=[==[Armor]==],
-		['class']={n=0,[1] = 'excel_写出数据',
+		['class']={n=0,[1] = 'excel_读取数据',
 		},
 		['文件名称']=[==[data_excel/Armor.xlsx]==],
 		['sheet名称']=[==[Sheet1]==],
 		['o表名称']=[==[o_Armor]==],
 		['是否转置']=false,
-		['是否全托']=false,
+		['是否全托']=true,
 	},
 	{
 		['name']=0x10030065,
 		['showname']=[==[Skills]==],
-		['class']={n=0,[1] = 'excel_写出数据',
+		['class']={n=0,[1] = 'excel_读取数据',
 		},
 		['文件名称']=[==[data_excel/Skills.xlsx]==],
 		['sheet名称']=[==[Sheet1]==],
 		['o表名称']=[==[o_Skills]==],
 		['是否转置']=false,
-		['是否全托']=false,
+		['是否全托']=true,
 	},
 	{
 		['name']=0x10030066,
@@ -59,7 +59,7 @@ local t = {
 		['sheet名称']=[==[Sheet1]==],
 		['o表名称']=[==[o_Weapons]==],
 		['是否转置']=false,
-		['是否全托']=false,
+		['是否全托']=true,
 	},
 }}
 return t
