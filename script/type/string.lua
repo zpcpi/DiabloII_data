@@ -44,6 +44,8 @@ end
 function t.save(od, l)
 	if type(od.obj) == 'boolean' then 
 		table.insert(l, tostring(od.obj))
+	elseif type(od.obj) == 'nil' then
+		table.insert(l, nil)
 	else
 		table.insert(l, '[==[' .. od.obj .. ']==]')
 	end
