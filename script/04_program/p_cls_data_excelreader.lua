@@ -754,8 +754,6 @@ local function excel_读取数据_sheet表头解析_txt版本(string_o表名称)
             can_write[v['name']] = k
         end
     end
-    G.show_table(can_write)
-
 
     local function iter()
         local str_col = int2let(int_col)
