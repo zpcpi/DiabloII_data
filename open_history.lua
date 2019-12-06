@@ -1,1 +1,1 @@
-return {'o_Skills','o_excel','o_Weapons'}
+return {'o_Skills','o_excel','o_Weapons','o_ArmType'}
