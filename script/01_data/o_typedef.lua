@@ -5,6 +5,15 @@ local t = {
 "o_typedef",
 {
 	{
+		['name']="o_WeaponClass",
+		['showname']="WeaponClass",
+		['define']={
+			[1]={['name']='Weapon Class',['type']='string',['needcopy']=true,},
+			[2]={['name']='Code',['type']='string',['needcopy']=true,},
+			[3]={['name']='*EOL',['type']='int',['needcopy']=true,},
+		},
+	},
+	{
 		['name']="o_ArmType",
 		['showname']="ArmType",
 		['define']={
