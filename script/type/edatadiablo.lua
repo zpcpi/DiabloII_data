@@ -2,12 +2,12 @@
 if type(t) ~= 'table' then t = {} end
 
 t.edata_version = {
-	['原版'] = {
-		['value'] = '0',
+	['0'] = {
+		['name'] = '原版',
 		['desc'] = '测试1',
 	},
-	['资料片'] = {
-		['value'] = '100',
+	['100'] = {
+		['name'] = '资料片',
 		['desc'] = '测试2',
 	},
 }
