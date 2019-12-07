@@ -31,7 +31,7 @@ local t = {
 	{
 		['name']=0x10030064,
 		['showname']=[==[Armor]==],
-		['class']={n=0,[1] = 'excel_读取数据',
+		['class']={n=0,[1] = 'excel_写出数据',
 		},
 		['文件名称']=[==[data_excel/Armor.xlsx]==],
 		['sheet名称']=[==[Sheet1]==],
