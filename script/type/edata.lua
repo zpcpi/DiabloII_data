@@ -23,12 +23,8 @@ end
 function t.to_str(od)
     if od.obj == nil then return '' end
 
-	local enum = t[od.desc.type]
-    for k,v in pairs(enum or {}) do
-        if v['value'] == od.obj then
-            return k .. ':' .. od.obj
-        end
-    end
+    local enum = t[od.desc.type]
+    return ((enum[od.obj] or {})['name'] or '') .. ':' .. od.obj
 end
 
 function t.edit(od, w)
@@ -40,8 +36,8 @@ function t.edit(od, w)
     local count = 1
     for k, v in pairs(enum or {}) do
         lst[count] = {
-            ['name'] = k,
-            ['value'] = v['value'],
+            ['name'] = v['name'],
+            ['value'] = k,
             ['desc'] = v['desc'],
         }
         count = count + 1

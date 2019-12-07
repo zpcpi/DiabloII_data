@@ -620,8 +620,31 @@ local function enum_init()
 
             excel_写入函数_可支持类型[cur_key] = iter
             excel_写出函数_可支持类型[cur_key] = function (v)
-                return cur_enum[v + 1] or ''
+                return v
             end
+            excel_写入函数_可支持类型['_' .. cur_key] = readfunc_arrayify(iter, {"|", })
+            excel_写出函数_可支持类型['_' .. cur_key] = writefunc_arrayify(excel_写出函数_可支持类型[cur_key], {"|", })
+        end
+    end
+
+    -- data枚举处理
+    local edata_list = require 'type/edatadiablo'
+    for key,edata in pairs(edata_list) do
+        if excel_写入函数_可支持类型[key] then
+            -- 已经注册了，不用再搞了
+        else
+            local cur_key = key
+            local cur_edata = edata
+            local iter = function (v) 
+                if string.find(v, ',') then
+                    return '"' .. tostring(v) .. '"'
+                else
+                    return tostring(v) 
+                end
+            end
+
+            excel_写入函数_可支持类型[cur_key] = xmlstr2str
+            excel_写出函数_可支持类型[cur_key] = iter
             excel_写入函数_可支持类型['_' .. cur_key] = readfunc_arrayify(iter, {"|", })
             excel_写出函数_可支持类型['_' .. cur_key] = writefunc_arrayify(excel_写出函数_可支持类型[cur_key], {"|", })
         end
